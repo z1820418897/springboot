@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gcrobot.doorkeeper.mapper.UserMapper">
+
+    <select id="selectUserByAll" resultType="com.gcrobot.doorkeeper.bean.User">
+       SELECT userid,username,password,type FROM  gc_user;
+    </select>
+
+    <insert id="insertUser" parameterType="com.gcrobot.doorkeeper.bean.User">
+        INSERT  INTO  gc_user(username,password,type) VALUES(#{username},#{password},#{type})
+    </insert>
+
+    <select id="findUserCount" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM gc_user;
+    </select>
+
+    <select id="findAllUser" parameterType="com.gcrobot.doorkeeper.util.PageHelp" resultType="com.gcrobot.doorkeeper.bean.User">
+        SELECT userid,username,password,type FROM gc_user limit #{start},#{end};
+    </select>
+
+</mapper>

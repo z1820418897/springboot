@@ -1,0 +1,25 @@
+[
+  {
+    "title": "主菜单",
+    "icon": "fa-stop-circle",
+    "id":1,
+    "spread": false,
+    "href": "",
+    "children": [
+      {
+        "title": "二级导航",
+        "icon": "",
+        "id":101,
+        "href": "/doorkeeper/userData",
+        "spread": false
+      },
+      {
+        "title": "百度",
+        "icon": "",
+        "id":102,
+        "href": "http://www.baidu.com/",
+        "spread": false
+      }
+    ]
+  }
+]

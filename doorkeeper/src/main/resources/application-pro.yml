@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /doorkeeper
+  port: 8888
+
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/doorkeeper?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+log:
+  level: info
+  file: mylog.log
+
+
